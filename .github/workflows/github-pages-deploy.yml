@@ -1,12 +1,12 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Runs on push to master branch
+  # Runs on push to main branch
   push:
-    branches: [ master ]
-  # Runs on pull requests to master
+    branches: [ main ]
+  # Runs on pull requests to main
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
   # Allows manual execution from the Actions tab
   workflow_dispatch:
 
@@ -47,7 +47,7 @@ jobs:
           npm run tw-build-prod
 
       - name: Deploy to GitHub Pages 🚀
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist # The folder where webpack generates the files
