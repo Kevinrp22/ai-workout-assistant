@@ -29,14 +29,21 @@
   <link rel="stylesheet" href="./stylesheets/output.css?v=1.0.1" />
   <link rel="stylesheet" href="./stylesheets/custom.css?v=1.0.1" />
   <link rel="icon" type="image/x-icon" href="./img/favicon.svg" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1TD93SJGB"></script>
-  <script>window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
 
-    gtag("config", "G-D1TD93SJGB");</script>
+  <!-- Script para manejar redirecciones en GitHub Pages para SPA -->
+  <script type="text/javascript">
+    // Redirección para GitHub Pages - Soporte para SPA
+    (function() {
+      // Si estamos en GitHub Pages
+      if (window.location.hostname.indexOf('github.io') !== -1) {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      }
+    })();
+  </script>
   <script defer="defer" src="chunk.d3a0f536c7a77f15749d.js"></script>
   <script defer="defer" src="chunk.523b573d8a8b341e853f.js"></script>
   <script defer="defer" src="chunk.f04ca6bd696c0f6a1a50.js"></script>

@@ -350,3 +350,5 @@ MigrationBackup/
 .ionide/
 
 public/sample-video
+
+ci-cd.md
